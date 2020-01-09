@@ -1,14 +1,14 @@
 const config = {
   gatsby: {
     pathPrefix: "/",
-    siteUrl: "https://learn.hasura.io",
+    siteUrl: "https://html5.codewaseem.tech",
     gaTrackingId: null
   },
   header: {
     logo:
       "https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/favicon.png",
-    logoLink: "https://learn.hasura.io",
-    title: "Gatsby Gitbook Boilerplate",
+    logoLink: "https://html5.codewaseem.tech",
+    title: "HTML5 Deep Dive",
     githubUrl: "https://github.com/hasura/gatsby-gitbook-boilerplate",
     helpUrl: "",
     tweetText: "",
@@ -22,15 +22,15 @@ const config = {
     }
   },
   sidebar: {
-    forcedNavOrder: ["/introduction", "/codeblock"],
+    forcedNavOrder: ["/introduction", "/html5-basics"],
     collapsedNav: ["/codeblock"],
-    links: [{ text: "Hasura", link: "https://hasura.io" }],
+    links: [{ text: "HTML5 Specs", link: "https://html.spec.whatwg.org/dev/" }],
     frontline: false,
     ignoreIndex: true
   },
   siteMetadata: {
-    title: "Gatsby Gitbook Boilerplate | Hasura",
-    description: "Documentation built with mdx. Powering learn.hasura.io ",
+    title: "HTML5 Deep Dive | Learning Directly From Specs",
+    description: "Learn HTML5 in-depth directly from the HTML5 specifications",
     ogImage: null,
     docsLocation:
       "https://github.com/hasura/gatsby-gitbook-boilerplate/tree/master/content",
@@ -39,8 +39,8 @@ const config = {
   pwa: {
     enabled: false, // disabling this will also remove the existing service worker.
     manifest: {
-      name: "Gatsby Gitbook Starter",
-      short_name: "GitbookStarter",
+      name: "HTML5 From Specs",
+      short_name: "Learn HTML5",
       start_url: "/",
       background_color: "#6b37bf",
       theme_color: "#6b37bf",

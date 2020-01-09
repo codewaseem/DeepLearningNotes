@@ -29,7 +29,8 @@ const CodeBlock = ({ children: exampleCode, ...props }) => {
   if (props["react-live"]) {
     return <LoadableComponent code={exampleCode} />;
   } else {
-    let lang = props.className.split("language-")[1];
+    let lang =
+      (props.className && props.className.split("language-")[1]) || "none";
     return (
       <Highlight
         {...defaultProps}
