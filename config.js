@@ -9,7 +9,7 @@ const config = {
       "https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/favicon.png",
     logoLink: "https://html5.codewaseem.tech",
     title: "HTML5 Deep Dive",
-    githubUrl: "https://github.com/hasura/gatsby-gitbook-boilerplate",
+    githubUrl: "",
     helpUrl: "",
     tweetText: "",
     links: [{ text: "", link: "" }],
