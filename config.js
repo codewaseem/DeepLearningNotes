@@ -1,14 +1,14 @@
 const config = {
   gatsby: {
     pathPrefix: "/",
-    siteUrl: "https://html5.codewaseem.tech",
+    siteUrl: "https://deep-learning.codewaseem.tech",
     gaTrackingId: null
   },
   header: {
     logo:
       "https://graphql-engine-cdn.hasura.io/learn-hasura/assets/homepage/favicon.png",
-    logoLink: "https://html5.codewaseem.tech",
-    title: "HTML5 Deep Dive",
+    logoLink: "https://deep-learning.codewaseem.tech",
+    title: "Deep Learning",
     githubUrl: "",
     helpUrl: "",
     tweetText: "",

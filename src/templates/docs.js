@@ -36,11 +36,41 @@ const Edit = styled("div")`
   }
 `;
 
+const NonMdxPages = ({ location, children }) => {
+  const metaTitle = config.siteMetadata.title;
+  const metaDescription = config.siteMetadata.description;
+  const canonicalUrl = config.gatsby.siteUrl + location.pathname;
+
+  return (
+    <>
+      <Helmet>
+        {metaTitle ? <title>{metaTitle}</title> : null}
+        {metaTitle ? <meta name="title" content={metaTitle} /> : null}
+        {metaDescription ? (
+          <meta name="description" content={metaDescription} />
+        ) : null}
+        {metaTitle ? <meta property="og:title" content={metaTitle} /> : null}
+        {metaDescription ? (
+          <meta property="og:description" content={metaDescription} />
+        ) : null}
+        {metaTitle ? (
+          <meta property="twitter:title" content={metaTitle} />
+        ) : null}
+        {metaDescription ? (
+          <meta property="twitter:description" content={metaDescription} />
+        ) : null}
+        <link rel="canonical" href={canonicalUrl} />
+      </Helmet>
+      {children}
+    </>
+  );
+};
+
 export default class MDXRuntimeTest extends Component {
   render() {
     const { data } = this.props;
     if (!data) {
-      return null;
+      return <NonMdxPages {...this.props}>{this.props.children}</NonMdxPages>;
     }
     const {
       allMdx,
