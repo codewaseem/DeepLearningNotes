@@ -24,7 +24,7 @@ const config = {
   sidebar: {
     forcedNavOrder: ["/introduction", "/intro-to-deep-learning"],
     collapsedNav: ["/codeblock"],
-    links: [{ text: "HTML5 Specs", link: "https://html.spec.whatwg.org/dev/" }],
+    links: [],
     frontline: false,
     ignoreIndex: true
   },
