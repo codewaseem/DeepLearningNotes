@@ -22,12 +22,7 @@ const config = {
     }
   },
   sidebar: {
-    forcedNavOrder: [
-      "/introduction",
-      "/html5-basics",
-      "/the-document-object",
-      "/elements"
-    ],
+    forcedNavOrder: ["/introduction", "/intro-to-deep-learning"],
     collapsedNav: ["/codeblock"],
     links: [{ text: "HTML5 Specs", link: "https://html.spec.whatwg.org/dev/" }],
     frontline: false,

@@ -2,7 +2,9 @@ require("dotenv").config();
 const queries = require("./src/utils/algolia");
 const config = require("./config");
 const plugins = [
+  "gatsby-plugin-emotion",
   "gatsby-plugin-sitemap",
+  "gatsby-transformer-sharp",
   "gatsby-plugin-sharp",
   {
     resolve: `gatsby-plugin-layout`,
@@ -10,7 +12,6 @@ const plugins = [
       component: require.resolve(`./src/templates/docs.js`)
     }
   },
-  "gatsby-plugin-emotion",
   "gatsby-plugin-remove-trailing-slashes",
   "gatsby-plugin-react-helmet",
   {
@@ -21,14 +22,20 @@ const plugins = [
     }
   },
   {
+    resolve: "gatsby-source-filesystem",
+    options: {
+      name: "images",
+      path: `${__dirname}/images/`
+    }
+  },
+  {
     resolve: "gatsby-plugin-mdx",
     options: {
       gatsbyRemarkPlugins: [
         {
           resolve: "gatsby-remark-images",
           options: {
-            maxWidth: 1035,
-            sizeByPixelDensity: true
+            maxWidth: 1035
           }
         },
         {
