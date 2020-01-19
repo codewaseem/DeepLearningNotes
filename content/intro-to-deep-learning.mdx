@@ -56,3 +56,60 @@ The number of incremental steps to take is given by `epochs`. In the below examp
   style="width:100%; height:550px; border:none"
   src="https://codewaseem.github.io/PerceptronPlayground/index.html"
 />
+
+### Non-Linear Regions
+
+The above algorithm works good when we can divide the data points with a linear line.
+But if the data was complex and a straight line could not divide the points properly, we need a
+different approach.
+
+#### Error-function
+
+To solve this, we make use of a error-function, error-function tells is the
+distance that a line is away from the misclassified points. The lesser the distance, the more
+accurate we get. This is called **gradient descent**
+
+**Properties of Error-Function**
+
+- It should be continious
+- It should be differentiable
+
+#### Predicition
+
+In the previous perceptron algorithm our prediction was discrete, i.e we either got `1` or `0` and nothing
+in-between.
+
+In a continious prediction we will have the probability of some possible outcome.
+
+To change our prediction from discrete to continious, we change the **activation function** from **step-function**
+to **sigmoid-function**.
+
+The formula for the **sigmoid-function** is
+
+```
+sigmoid(x) = 1/(1+e^-x)
+```
+
+where `x` is the score given ` w1``x1 `+` w2``x2 `+...`b`
+
+## Multi-Class Classification
+
+Both version of the above perceptron could only classify a point into one of the two class. But if we
+have more than two classes, we use **softmax-function**.
+
+### Softmax-Function
+
+The **softmax-function** gives as the probability of each class is given by
+
+```
+P(class i) = e^Zi / (e^z1 + ... + e^zn);
+```
+
+Where `Zi`, is the score of each class.
+
+## How Good a Model is?
+
+To find how good a model is we make use of **cross-entropy** it is the negative sum of all the `ln(P(i))`.
+The lower the number the better the model is.
+
+There is also a multi-class cross-entropy.
