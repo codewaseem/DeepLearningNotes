@@ -22,7 +22,11 @@ const config = {
     }
   },
   sidebar: {
-    forcedNavOrder: ["/introduction", "/intro-to-deep-learning"],
+    forcedNavOrder: [
+      "/introduction",
+      "/intro-to-deep-learning",
+      "/logistic-regression"
+    ],
     collapsedNav: ["/codeblock"],
     links: [],
     frontline: false,
